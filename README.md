@@ -19,7 +19,8 @@ Create a base container (Resource Group) to organize and manage Azure resources 
 - Open the RG and check **Activity log**.
 
 ## 📸 Screenshots
-- `screenshots/rg-demo-raj.png`
+- screenshots/Resource group.PNG
+
 
 ---
 
