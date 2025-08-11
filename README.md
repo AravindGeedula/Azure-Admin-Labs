@@ -1,5 +1,4 @@
-# Azure-Resource-Group-Setup
-Create  and validate  a Resource Group in Microsoft Azure  Portal.
+
 # Azure Resource Group Setup
 
 **Date Completed:** July 01, 2025  
