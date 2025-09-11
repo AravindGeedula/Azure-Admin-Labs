@@ -1,0 +1,21 @@
+az consumption budget create \
+  --scope "/subscriptions/<SUBSCRIPTION_ID>" \
+  --budget-name Monthly-Lab-Budget \
+  --category cost \
+  --amount 1500 \
+  --time-grain monthly \
+  --start-date 2025-09-01 \
+  --end-date 2026-09-01 \
+  --notifications \
+    actual_greater_than_50_percent=true\
+    contact_emails=geedulaaravind@gmail.com\
+    operator=GreaterThan\
+    threshold=50 \
+    actual_greater_than_80_percent=true\
+    contact_emails=geedulaaravind@gmail.com\
+    operator=GreaterThan\
+    threshold=80 \
+    actual_greater_than_100_percent=true\
+    contact_emails=geedulaaravind@gmail.com\
+    operator=GreaterThan\
+    threshold=100
