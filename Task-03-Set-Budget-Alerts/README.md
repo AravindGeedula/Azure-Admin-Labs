@@ -1,4 +1,4 @@
-az consumption budget create \
+ az consumption budget create \
   --scope "/subscriptions/<SUBSCRIPTION_ID>" \
   --budget-name Monthly-Lab-Budget \
   --category cost \
