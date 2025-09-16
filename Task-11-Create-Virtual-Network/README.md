@@ -16,3 +16,8 @@ Created a Virtual Network (VNet) named **Demo-VNet** inside the resource group *
 
 ### Notes
 This VNet will be used in later tasks to connect VMs and other Azure resources.
+
+### Screenshot
+![Task 11 Screenshot](./task11-vnet-deployment.png)
+
+
