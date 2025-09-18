@@ -19,5 +19,3 @@ Created a new custom subnet inside an existing Virtual Network (VNet) named **De
 - Verified both **default subnet (10.1.0.0/24)** and new **Subnet-Demo01** exist without overlap.  
 - Logical network segmentation achieved, enabling workload isolation.
 
-## Screenshot
-![Task 12 Screenshot](https://drive.google.com/file/d/1CRTwYu__J_MA9XApm4HbCuzNuSpopusI/view?usp=drive_link)
