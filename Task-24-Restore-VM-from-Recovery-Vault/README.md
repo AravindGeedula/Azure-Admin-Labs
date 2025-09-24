@@ -1,9 +1,7 @@
 # Task 24: Restore Azure Virtual Machine from Recovery Services Vault Backup
 
 ## Description
-Restored a previously backed-up virtual machine by creating a **new VM** from a selected recovery point using **Azure Recovery Services Vault (RSV)**.
-
----
+Restore a previously backed-up virtual machine by creating a new VM from a selected recovery point using **Azure Recovery Services Vault**.
 
 ## 🧱 Step-by-Step Execution
 
@@ -25,19 +23,42 @@ Restored a previously backed-up virtual machine by creating a **new VM** from a 
 - Clicked **OK** to confirm restore point.
 
 ### Step 5: Restore Configuration
-- Specified restore settings:  
-  - Created a **new VM** (RestoredVM1).  
-  - Chose same **Region: Central India**.  
-  - Selected appropriate **Resource Group**.  
-  - Networking and storage auto-linked to new resources.  
+In the **Restore Virtual Machine** blade:
+- **Restore Type:** Create new virtual machine  
+- **VM Name:** RestoredVM1  
+- **Resource Group:** RG-Demo-Raj  
+- **Virtual Network:** Default VNet (selected from dropdown)  
+- **Subnet:** Default subnet (auto-filled)  
+- **Staging Location:** Created new storage account  
 
-- Clicked **Review + Restore → Restore**.  
+### Step 6: Create Storage Account
+- Went to **Create Storage Account**:  
+  - **Name:** stgrestorevm01  
+  - **Region:** Central India  
+  - **Performance:** Standard  
+  - **Redundancy:** GRS  
+- Clicked **Review + Create** → Deployed the storage account.
 
-### Step 6: Verification
-- Deployment completed successfully.  
-- Verified new VM **RestoredVM1** appeared in the Resource Group.  
-- Confirmed OS disk and configuration were restored from the snapshot.  
+### Step 7: Finalize Restore
+- Returned to the restore wizard.  
+- Selected newly created **stgrestorevm01** as staging location.  
+- Clicked **Restore** to trigger restore operation.
+
+### Step 8: Monitor Restore Progress
+- Navigated to **Backup Jobs** under vault.  
+- Saw 3 job entries:  
+  - Configure Backup → ✅ Completed  
+  - Backup → ✅ Completed  
+  - Restore → ✅ Completed  
+
+### Step 9: Verify Virtual Machine
+- Went to **Virtual Machines** in Azure portal.  
+- Confirmed the new VM **RestoredVM1** was in **Running** state.  
+- Region, OS, resource group were all intact as per backup.
 
 ---
 
-✅ **Outcome**: Successfully restored VM (**RestoredVM1**) from Recovery Vault backup. This simulates a real-world **Disaster Recovery (DR)** scenario where workloads can be brought back online quickly.  
+## ✅ Outcome
+- Successfully restored a new VM (**RestoredVM1**) from a backup recovery point.  
+- Verified that the restored VM was up and running with correct configuration, resource group, and region.  
+- Demonstrated **disaster recovery readiness** using Recovery Services Vault in Azure.
